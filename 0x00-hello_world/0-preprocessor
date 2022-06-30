@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/ban
 gcc $CFILE -E -o c
