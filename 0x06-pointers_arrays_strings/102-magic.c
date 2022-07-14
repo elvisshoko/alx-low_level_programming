@@ -26,3 +26,4 @@ for (int i = 0; i < 5; i++)
 printf("a[2] = %d\n", a[2]);
 return (0);
 }
+
