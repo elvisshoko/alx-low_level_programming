@@ -1,32 +1,37 @@
 #include "main.h"
 
 /**
-* prime_a - check the code for Alx School students.
-* @a: number
-* @b: number of power
-* Return: Always 0.
-*/
+ * is_prime - detects if an input number is a prime number.
+ * @n: input number.
+ * @c: iterator.
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
+ */
 
-int prime_a(int a, int b)
+int is_prime(unsigned int n, unsigned int c)
 {
-if (a <= 1 || (a != b && a % b == 0))
-{
-return (0);
-}
-else if (a == b)
-{
-return (1);
-}
-return (prime_a(a, b + 1));
+	if (n % c == 0)
+	{
+		if (n == c)
+			return (1);
+		else
+			return (0);
+	}
+	return (0 + is_prime(n, c + 1));
 }
 
 /**
-* is_prime_number - check the code for Alx School students.
-* @n: number
-*
-* Return: Always 0.
-*/
+ * is_prime_number - detects if an input number is a prime number
+ * @n: input number
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
+ */
+
 int is_prime_number(int n)
 {
-return (prime_a(n, 2));
+	if (n == 0)
+		return (0);
+	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (0);
+	return (is_prime(n, 2));
 }
